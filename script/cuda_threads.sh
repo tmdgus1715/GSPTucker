@@ -1,0 +1,56 @@
+./GSPTucker_128 -i ~/datasets/nell-2.tns -o 3 -r 10 -g 1 -s 1 -c 4 -H 100 -a >> result/nell-2_r10_g1_c4_a_128.txt 2>&1
+./GSPTucker_128 -i ~/datasets/delicious-3d.tns -o 3 -r 10 -g 1 -s 1 -c 4 -H 100 -a >> result/delicious-3d_r10_g1_c4_a_128.txt 2>&1
+./GSPTucker_128 -i ~/datasets/flickr-3d.tns -o 3 -r 10 -g 1 -s 1 -c 4 -H 100 -a >> result/flickr-3d_r10_g1_c4_a_128.txt 2>&1
+# ./GSPTucker_128 -i ~/datasets/amazon-reviews.tns -o 3 -r 10 -g 1 -s 1 -c 4 -H 100 -a >> result/amazon-reviews_r10_g1_c4_a_128.txt 2>&1
+./GSPTucker_128 -i ~/datasets/chicago-crime-comm.tns -o 4 -r 10 -g 1 -s 1 -c 4 -H 100 -a >> result/chicago-crime-comm_r10_g1_c4_a_128.txt 2>&1
+./GSPTucker_128 -i ~/datasets/chicago-crime-geo.tns -o 5 -r 10 -g 1 -s 1 -c 4 -H 100 -a >> result/chicago-crime-geo_r10_g1_c4_a_128.txt 2>&1
+./GSPTucker_128 -i ~/datasets/enron.tns -o 4 -r 10 -g 1 -s 1 -c 4 -H 100 -a >> result/enron_r10_g1_c4_a_128.txt 2>&1
+# ./GSPTucker_128 -i ~/datasets/fb-m.tns -o 3 -r 10 -g 1 -s 1 -c 4 -H 100 -a >> result/fb-m_r10_g1_c4_a_128.txt 2>&1
+./GSPTucker_128 -i ~/datasets/lbnl-network.tns -o 5 -r 10 -g 1 -s 1 -c 4 -H 100 -a >> result/lbnl-network_r10_g1_c4_a_128.txt 2>&1
+./GSPTucker_128 -i ~/datasets/nell-1.tns -o 3 -r 10 -g 1 -s 1 -c 4 -H 100 -a >> result/nell-1_r10_g1_c4_a_128.txt 2>&1
+./GSPTucker_128 -i ~/datasets/nips.tns -o 4 -r 10 -g 1 -s 1 -c 4 -H 100 -a >> result/nips_r10_g1_c4_a_128.txt 2>&1
+# ./GSPTucker_128 -i ~/datasets/patents.tns -o 3 -r 10 -g 1 -s 1 -c 4 -H 100 -a >> result/patents_r10_g1_c4_a_128.txt 2>&1
+# ./GSPTucker_128 -i ~/datasets/reddit-2015.tns -o 3 -r 10 -g 1 -s 1 -c 4 -H 100 -a >> result/reddit-2015_r10_g1_c4_a_128.txt 2>&1
+./GSPTucker_128 -i ~/datasets/uber.tns -o 4 -r 10 -g 1 -s 1 -c 4 -H 100 -a >> result/uber_r10_g1_c4_a_128.txt 2>&1
+./GSPTucker_128 -i ~/datasets/vast-2015-mc1-3d.tns -o 3 -r 10 -g 1 -s 1 -c 4 -H 100 -a >> result/vast-2015-mc1-3d_r10_g1_c4_a_128.txt 2>&1
+./GSPTucker_128 -i ~/datasets/vast-2015-mc1-5d.tns -o 5 -r 10 -g 1 -s 1 -c 4 -H 100 -a >> result/vast-2015-mc1-5d_r10_g1_c4_a_128.txt 2>&1
+./GSPTucker_128 -i ~/datasets/delicious-4d.tns -o 4 -r 10 -g 2 -s 1 -c 4 -H 100 -a >> result/delicious-4d_r10_g2_c4_a_128.txt 2>&1
+
+./GSPTucker_256 -i ~/datasets/nell-2.tns -o 3 -r 10 -g 1 -s 1 -c 4 -H 100 -a >> result/nell-2_r10_g1_c4_a_256.txt 2>&1
+./GSPTucker_256 -i ~/datasets/delicious-3d.tns -o 3 -r 10 -g 1 -s 1 -c 4 -H 100 -a >> result/delicious-3d_r10_g1_c4_a_256.txt 2>&1
+./GSPTucker_256 -i ~/datasets/flickr-3d.tns -o 3 -r 10 -g 1 -s 1 -c 4 -H 100 -a >> result/flickr-3d_r10_g1_c4_a_256.txt 2>&1
+# ./GSPTucker_256 -i ~/datasets/amazon-reviews.tns -o 3 -r 10 -g 1 -s 1 -c 4 -H 100 -a >> result/amazon-reviews_r10_g1_c4_a_256.txt 2>&1
+./GSPTucker_256 -i ~/datasets/chicago-crime-comm.tns -o 4 -r 10 -g 1 -s 1 -c 4 -H 100 -a >> result/chicago-crime-comm_r10_g1_c4_a_256.txt 2>&1
+./GSPTucker_256 -i ~/datasets/chicago-crime-geo.tns -o 5 -r 10 -g 1 -s 1 -c 4 -H 100 -a >> result/chicago-crime-geo_r10_g1_c4_a_256.txt 2>&1
+./GSPTucker_256 -i ~/datasets/enron.tns -o 4 -r 10 -g 1 -s 1 -c 4 -H 100 -a >> result/enron_r10_g1_c4_a_256.txt 2>&1
+#rank실험 결과 로그에 append함
+# ./GSPTucker_256 -i ~/datasets/fb-m.tns -o 3 -r 10 -g 1 -s 1 -c 4 -H 100 -a >> result/fb-m_r10_g1_c4_a_256.txt 2>&1
+./GSPTucker_256 -i ~/datasets/lbnl-network.tns -o 5 -r 10 -g 1 -s 1 -c 4 -H 100 -a >> result/lbnl-network_r10_g1_c4_a_256.txt 2>&1
+./GSPTucker_256 -i ~/datasets/nell-1.tns -o 3 -r 10 -g 1 -s 1 -c 4 -H 100 -a >> result/nell-1_r10_g1_c4_a_256.txt 2>&1
+./GSPTucker_256 -i ~/datasets/nips.tns -o 4 -r 10 -g 1 -s 1 -c 4 -H 100 -a >> result/nips_r10_g1_c4_a_256.txt 2>&1
+# ./GSPTucker_256 -i ~/datasets/patents.tns -o 3 -r 10 -g 1 -s 1 -c 4 -H 100 -a >> result/patents_r10_g1_c4_a_256.txt 2>&1
+# ./GSPTucker_256 -i ~/datasets/reddit-2015.tns -o 3 -r 10 -g 1 -s 1 -c 4 -H 100 -a >> result/reddit-2015_r10_g1_c4_a_256.txt 2>&1
+./GSPTucker_256 -i ~/datasets/uber.tns -o 4 -r 10 -g 1 -s 1 -c 4 -H 100 -a >> result/uber_r10_g1_c4_a_256.txt 2>&1
+./GSPTucker_256 -i ~/datasets/vast-2015-mc1-3d.tns -o 3 -r 10 -g 1 -s 1 -c 4 -H 100 -a >> result/vast-2015-mc1-3d_r10_g1_c4_a_256.txt 2>&1
+./GSPTucker_256 -i ~/datasets/vast-2015-mc1-5d.tns -o 5 -r 10 -g 1 -s 1 -c 4 -H 100 -a >> result/vast-2015-mc1-5d_r10_g1_c4_a_256.txt 2>&1
+./GSPTucker_256 -i ~/datasets/delicious-4d.tns -o 4 -r 10 -g 2 -s 1 -c 4 -H 100 -a >> result/delicious-4d_r10_g2_c4_a_256.txt 2>&1
+
+./GSPTucker_1024 -i ~/datasets/nell-2.tns -o 3 -r 10 -g 1 -s 1 -c 4 -H 100 -a >> result/nell-2_r10_g1_c4_a_1024.txt 2>&1
+./GSPTucker_1024 -i ~/datasets/delicious-3d.tns -o 3 -r 10 -g 1 -s 1 -c 4 -H 100 -a >> result/delicious-3d_r10_g1_c4_a_1024.txt 2>&1
+./GSPTucker_1024 -i ~/datasets/flickr-3d.tns -o 3 -r 10 -g 1 -s 1 -c 4 -H 100 -a >> result/flickr-3d_r10_g1_c4_a_1024.txt 2>&1
+# ./GSPTucker_1024 -i ~/datasets/amazon-reviews.tns -o 3 -r 10 -g 1 -s 1 -c 4 -H 100 -a >> result/amazon-reviews_r10_g1_c4_a_1024.txt 2>&1
+./GSPTucker_1024 -i ~/datasets/chicago-crime-comm.tns -o 4 -r 10 -g 1 -s 1 -c 4 -H 100 -a >> result/chicago-crime-comm_r10_g1_c4_a_1024.txt 2>&1
+./GSPTucker_1024 -i ~/datasets/chicago-crime-geo.tns -o 5 -r 10 -g 1 -s 1 -c 4 -H 100 -a >> result/chicago-crime-geo_r10_g1_c4_a_1024.txt 2>&1
+./GSPTucker_1024 -i ~/datasets/enron.tns -o 4 -r 10 -g 1 -s 1 -c 4 -H 100 -a >> result/enron_r10_g1_c4_a_1024.txt 2>&1
+# ./GSPTucker_1024 -i ~/datasets/fb-m.tns -o 3 -r 10 -g 1 -s 1 -c 4 -H 100 -a >> result/fb-m_r10_g1_c4_a_1024.txt 2>&1
+./GSPTucker_1024 -i ~/datasets/lbnl-network.tns -o 5 -r 10 -g 1 -s 1 -c 4 -H 100 -a >> result/lbnl-network_r10_g1_c4_a_1024.txt 2>&1
+./GSPTucker_1024 -i ~/datasets/nell-1.tns -o 3 -r 10 -g 1 -s 1 -c 4 -H 100 -a >> result/nell-1_r10_g1_c4_a_1024.txt 2>&1
+./GSPTucker_1024 -i ~/datasets/nips.tns -o 4 -r 10 -g 1 -s 1 -c 4 -H 100 -a >> result/nips_r10_g1_c4_a_1024.txt 2>&1
+# ./GSPTucker_1024 -i ~/datasets/patents.tns -o 3 -r 10 -g 1 -s 1 -c 4 -H 100 -a >> result/patents_r10_g1_c4_a_1024.txt 2>&1
+# ./GSPTucker_1024 -i ~/datasets/reddit-2015.tns -o 3 -r 10 -g 1 -s 1 -c 4 -H 100 -a >> result/reddit-2015_r10_g1_c4_a_1024.txt 2>&1
+./GSPTucker_1024 -i ~/datasets/uber.tns -o 4 -r 10 -g 1 -s 1 -c 4 -H 100 -a >> result/uber_r10_g1_c4_a_1024.txt 2>&1
+./GSPTucker_1024 -i ~/datasets/vast-2015-mc1-3d.tns -o 3 -r 10 -g 1 -s 1 -c 4 -H 100 -a >> result/vast-2015-mc1-3d_r10_g1_c4_a_1024.txt 2>&1
+./GSPTucker_1024 -i ~/datasets/vast-2015-mc1-5d.tns -o 5 -r 10 -g 1 -s 1 -c 4 -H 100 -a >> result/vast-2015-mc1-5d_r10_g1_c4_a_1024.txt 2>&1
+./GSPTucker_1024 -i ~/datasets/delicious-4d.tns -o 4 -r 10 -g 2 -s 1 -c 4 -H 100 -a >> result/delicious-4d_r10_g2_c4_a_1024.txt 2>&1
+
+

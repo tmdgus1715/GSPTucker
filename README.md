@@ -47,6 +47,7 @@ Run the executable with the required arguments.
 |--------|-------|-------------|---------|
 | `--help` | `-h` | Display help menu. | - |
 | `--input` | `-i` | Path to the input tensor file. | **Required** |
+| `--output` | `-O` | Path to the output directory (SSD path). | Default (Home) |
 | `--order` | `-o` | Order (number of modes) of the tensor. | **Required** |
 | `--rank` | `-r` | Tucker rank for the decomposition. | 10 |
 | `--gpus` | `-g` | Number of GPUs to use. | 1 |
@@ -57,10 +58,10 @@ Run the executable with the required arguments.
 ### Example
 
 ```bash
-./GSPTucker -i ~/datasets/nell-2.tns -o 3 -r 10 -g 1 -s 1 -c 4 -H 64 -a
+./GSPTucker -i ~/datasets/nell-2.tns -O ./ -o 3 -r 10 -g 1 -c 4 -H 64 -a
 ```
 
-This command runs Tucker decomposition on `nell-2.tns` (order 3) with rank 10, using 1 GPU, 1 SSD, 4 CUDA streams, a 64GB host memory limit, and average-based partitioning.
+This command runs Tucker decomposition on `nell-2.tns` (order 3) with rank 10, using 1 GPU, outputting to ./, 4 CUDA streams, a 64GB host memory limit, and average-based partitioning.
 
 ## Input Format
 
@@ -81,8 +82,8 @@ The input file should be in a coordinate format, where each line represents a no
 ...
 ```
 
-- Indices are 1-based (typically, though implementation might handle 0-based).
-- Indices and value are space-separated.
+- Indices are 1-based.
+- Indices and value are tap-separated.
 
 Real-world tensor datasets are available in `scripts/datasets.sh`. For more datasets, refer to [FROSTT](http://frostt.io/).
 
