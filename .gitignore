@@ -1,0 +1,14 @@
+
+
+# Results and Logs
+results/
+async_h2d_result/
+async_s2h_result/
+mem_result/
+partitioning_param_result/
+rank_result/
+threads_result/
+tiling_result/
+
+# System
+.DS_Store
