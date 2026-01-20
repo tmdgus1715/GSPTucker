@@ -7,7 +7,7 @@ COMMON_FLAGS = -O2 -std=c++17
 DEBUG_FLAGS = -O0 -g -G -std=c++17
 INCLUDE_DIRS = -Iinclude -Ilib -I/home/chon0705/boost_1_66_0/include
 LIB_DIRS = -L/home/chon0705/boost_1_66_0/lib -L/usr/lib/x86_64-linux-gnu
-LIBS = -lboost_program_options -lboost_filesystem -lboost_system -lstdc++
+LIBS = -lboost_program_options -lboost_filesystem -lboost_system -lstdc++ -lpthread
 
 # CUDA-specific flags
 CUDA_FLAGS = --disable-warnings -std=c++17 -Xcompiler "-O2 -fopenmp" --compiler-options -fopenmp -lcudart

@@ -9,6 +9,14 @@ GSPTucker is a high-performance Tucker decomposition implementation designed for
 - **Out-of-Core Processing**: Efficiently handles large tensors by utilizing SSDs and host memory, overcoming GPU memory constraints.
 - **Multi-level Partitioning**: Implements a multi-level partitioning strategy to effectively handle data skewness and ensure balanced workload distribution across GPUs.
 
+## License
+
+This project is licensed under the terms of the GNU General Public License v3.0 (GPLv3). See the [LICENSE](LICENSE) file for details.
+
+### Disclaimer
+
+**THERE IS NO WARRANTY FOR THE PROGRAM, TO THE EXTENT PERMITTED BY APPLICABLE LAW.** EXCEPT WHEN OTHERWISE STATED IN WRITING THE COPYRIGHT HOLDERS AND/OR OTHER PARTIES PROVIDE THE PROGRAM "AS IS" WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. THE ENTIRE RISK AS TO THE QUALITY AND PERFORMANCE OF THE PROGRAM IS WITH YOU. SHOULD THE PROGRAM PROVE DEFECTIVE, YOU ASSUME THE COST OF ALL NECESSARY SERVICING, REPAIR OR CORRECTION.
+
 ## Prerequisites
 
 - **CUDA Toolkit**: (Tested with 11.x)
