@@ -110,7 +110,6 @@ void Scheduler<SCHEDULER_TEMPLATE_ARGS>::_DimensionBasedPartitioning(
     sort_block_id[block_id] = block_id;
     sort_nnz_count[block_id] = tensor->blocks[block_id]->nnz_count;
   }
-  // Sort block id by the number of nonzeros
   std::sort(sort_block_id.begin(), sort_block_id.end(),
             [&](const uint64_t a, const uint64_t& b) {
               return (sort_nnz_count[a] > sort_nnz_count[b]);
@@ -133,8 +132,6 @@ void Scheduler<SCHEDULER_TEMPLATE_ARGS>::_DimensionBasedPartitioning(
     double tau = 1.0;
     uint64_t skew_nnz = avg_nnz * tau;
 
-    // Strategy: Target uniform task size around avg_nnz, but respect hardware
-    // limit.
     this->nnz_count_per_task = std::min(skew_nnz, limit_nnz);
 
     printf("=== Partitioning Strategy: Average-Based ===\n");
@@ -159,8 +156,6 @@ void Scheduler<SCHEDULER_TEMPLATE_ARGS>::_DimensionBasedPartitioning(
 
   for (uint64_t i = 0; i < tensor->block_count; ++i) {
     uint64_t block_id = sort_block_id[i];
-
-    // Removed child block logic
     uint64_t remaining = tensor->blocks[block_id]->nnz_count;
     uint64_t offset = 0;
 

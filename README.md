@@ -1,6 +1,11 @@
 # GSPTucker
 
-GSPTucker is a high-performance Tucker decomposition implementation designed for large-scale sparse tensors. It leverages CUDA for GPU acceleration and supports out-of-core processing to handle tensors that exceed GPU memory limits.
+Toward scalable Tucker decomposition: skew-aware multi-level partitioning with GPU-storage co-processing
+
+GSP-Tucker is a scalable and robust Tucker decomposition system designed for billion-scale sparse tensors with severe data skew.
+It integrates skew-aware multi-level partitioning, GPU acceleration, and storage-based out-of-core processing to overcome the fundamental scalability limitations of existing Tucker decomposition methods.
+
+Unlike conventional CPU, GPU, and distributed approaches that suffer from intermediate data explosion, memory overflow, and skew-induced workload imbalance, GSP-Tucker provides a unified co-design of partitioning, computation, and I/O scheduling, enabling reliable large-scale tensor decomposition on a single heterogeneous GPU-storage node
 
 ## Features
 
@@ -61,7 +66,7 @@ Run the executable with the required arguments.
 | `--gpus` | `-g` | Number of GPUs to use. | 1 |
 | `--host_memory_limit` | `-H` | Host memory limit in GB. | 16 |
 | `--cuda_stream_count` | `-c` | Number of CUDA streams per GPU. | 1 |
-| `--avg_partition` | `-a` | Enable average-based partitioning for better load balancing. | False |
+| `--avg_partition` | `-a` | Enable average-based local-skew partitioning for better load balancing. | False |
 
 ### Example
 
