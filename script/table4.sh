@@ -73,15 +73,50 @@
 ./bin/VeST ~/datasets/lbnl-network.tns mem_result/ 5 10 10 10 10 10 0.8 12 
 ./bin/VeST ~/datasets/chicago-crime-geo.tns mem_result/ 5 10 10 10 10 10 0.8 12
 
+hadoop jar HaTen2.jar kr.ac.snu.datalab.HaTen2.Tucker "1:1774269:1805187" "10:10:10" 20 1 hdfs:///datasets/amazon-reviews.tns hdfs:///output/haten2_r10/amazon-reviews ./log/haten2_r10/amazon-reviews_r10_it1.log
+hadoop jar HaTen2.jar kr.ac.snu.datalab.HaTen2.Tucker "532924:17262471:2480308" "10:10:10" 20 1 hdfs:///datasets/delicious-3d.tns hdfs:///output/haten2_r10/delicious-3d ./log/haten2_r10/delicious-3d_r10_it1.log
+hadoop jar HaTen2.jar kr.ac.snu.datalab.HaTen2.Tucker "319686:28153045:1607191" "10:10:10" 20 1 hdfs:///datasets/flickr-3d.tns hdfs:///output/haten2_r10/flickr-3d ./log/haten2_r10/flickr-3d_r10_it1.log
+hadoop jar HaTen2.jar kr.ac.snu.datalab.HaTen2.Tucker "2902330:2143368:25495389" "10:10:10" 20 1 hdfs:///datasets/nell-1.tns hdfs:///output/haten2_r10/nell-1 ./log/haten2_r10/nell-1_r10_it1.log
+hadoop jar HaTen2.jar kr.ac.snu.datalab.HaTen2.Tucker "12092:9184:28818" "10:10:10" 20 1 hdfs:///datasets/nell-2.tns hdfs:///output/haten2_r10/nell-2 ./log/haten2_r10/nell-2_r10_it1.log
+hadoop jar HaTen2.jar kr.ac.snu.datalab.HaTen2.Tucker "8211298:176962:8116559" "10:10:10" 20 1 hdfs:///datasets/reddit-2015.tns hdfs:///output/haten2_r10/reddit-2015 ./log/haten2_r10/reddit-2015_r10_it1.log
+hadoop jar HaTen2.jar kr.ac.snu.datalab.HaTen2.Tucker "165427:11374:2" "10:10:10" 20 1 hdfs:///datasets/vast-2015-mc1-3d.tns hdfs:///output/haten2_r10/vast-2015-mc1-3d ./log/haten2_r10/vast-2015-mc1-3d_r10_it1.log
+hadoop jar HaTen2.jar kr.ac.snu.datalab.HaTen2.Tucker "6186:24:77:32" "10:10:10:10" 20 1 hdfs:///datasets/chicago-crime-comm.tns hdfs:///output/haten2_r10/chicago-crime-comm ./log/haten2_r10/chicago-crime-comm_r10_it1.log
+hadoop jar HaTen2.jar kr.ac.snu.datalab.HaTen2.Tucker "6066:5699:244268:1176" "10:10:10:10" 20 1 hdfs:///datasets/enron.tns hdfs:///output/haten2_r10/enron ./log/haten2_r10/enron_r10_it1.log
+hadoop jar HaTen2.jar kr.ac.snu.datalab.HaTen2.Tucker "319686:28153045:1607191:731" "10:10:10:10" 20 1 hdfs:///datasets/flickr-4d.tns hdfs:///output/haten2_r10/flickr-4d ./log/haten2_r10/flickr-4d_r10_it1.log
+hadoop jar HaTen2.jar kr.ac.snu.datalab.HaTen2.Tucker "2482:2862:14036:17" "10:10:10:10" 20 1 hdfs:///datasets/nips.tns hdfs:///output/haten2_r10/nips ./log/haten2_r10/nips_r10_it1.log
+hadoop jar HaTen2.jar kr.ac.snu.datalab.HaTen2.Tucker "183:24:1140:1717" "10:10:10:10" 20 1 hdfs:///datasets/uber.tns hdfs:///output/haten2_r10/uber ./log/haten2_r10/uber_r10_it1.log
+hadoop jar HaTen2.jar kr.ac.snu.datalab.HaTen2.Tucker "6185:24:380:395:32" "10:10:10:10:10" 20 1 hdfs:///datasets/chicago-crime-geo.tns hdfs:///output/haten2_r10/chicago-crime-geo ./log/haten2_r10/chicago-crime-geo_r10_it1.log
+hadoop jar HaTen2.jar kr.ac.snu.datalab.HaTen2.Tucker "1605:4198:1631:4209:868131" "10:10:10:10:10" 20 1 hdfs:///datasets/lbnl-network.tns hdfs:///output/haten2_r10/lbnl-network ./log/haten2_r10/lbnl-network_r10_it1.log
 
+spark-submit --master yarn --deploy-mode client --num-executors 20 --executor-cores 2 --executor-memory 8G --class mulot.distributed.TuckerRunner MuLOT-distributed-assembly-0.6.jar hdfs:///datasets/nell-2.tns 10,10,10
+spark-submit --master yarn --deploy-mode client --num-executors 20 --executor-cores 2 --executor-memory 8G --class mulot.distributed.TuckerRunner MuLOT-distributed-assembly-0.6.jar hdfs:///datasets/nell-1.tns 10,10,10
+spark-submit --master yarn --deploy-mode client --num-executors 20 --executor-cores 2 --executor-memory 8G --class mulot.distributed.TuckerRunner MuLOT-distributed-assembly-0.6.jar hdfs:///datasets/delicious-3d.tns 10,10,10
+spark-submit --master yarn --deploy-mode client --num-executors 20 --executor-cores 2 --executor-memory 8G --class mulot.distributed.TuckerRunner MuLOT-distributed-assembly-0.6.jar hdfs:///datasets/flickr-3d.tns 10,10,10
+spark-submit --master yarn --deploy-mode client --num-executors 20 --executor-cores 2 --executor-memory 8G --class mulot.distributed.TuckerRunner MuLOT-distributed-assembly-0.6.jar hdfs:///datasets/vast-2015-mc1-3d.tns 10,10,10
+spark-submit --master yarn --deploy-mode client --num-executors 20 --executor-cores 2 --executor-memory 8G --class mulot.distributed.TuckerRunner MuLOT-distributed-assembly-0.6.jar hdfs:///datasets/reddit-2015.tns 10,10,10
+spark-submit --master yarn --deploy-mode client --num-executors 20 --executor-cores 2 --executor-memory 8G --class mulot.distributed.TuckerRunner MuLOT-distributed-assembly-0.6.jar hdfs:///datasets/amazon-reviews.tns 10,10,10
+spark-submit --master yarn --deploy-mode client --num-executors 20 --executor-cores 2 --executor-memory 8G --class mulot.distributed.TuckerRunner MuLOT-distributed-assembly-0.6.jar hdfs:///datasets/nips.tns 10,10,10,10
+spark-submit --master yarn --deploy-mode client --num-executors 20 --executor-cores 2 --executor-memory 8G --class mulot.distributed.TuckerRunner MuLOT-distributed-assembly-0.6.jar hdfs:///datasets/uber.tns 10,10,10,10
+spark-submit --master yarn --deploy-mode client --num-executors 20 --executor-cores 2 --executor-memory 8G --class mulot.distributed.TuckerRunner MuLOT-distributed-assembly-0.6.jar hdfs:///datasets/chicago-crime-comm.tns 10,10,10,10
+spark-submit --master yarn --deploy-mode client --num-executors 20 --executor-cores 2 --executor-memory 8G --class mulot.distributed.TuckerRunner MuLOT-distributed-assembly-0.6.jar hdfs:///datasets/enron.tns 10,10,10,10
+spark-submit --master yarn --deploy-mode client --num-executors 20 --executor-cores 2 --executor-memory 8G --class mulot.distributed.TuckerRunner MuLOT-distributed-assembly-0.6.jar hdfs:///datasets/flickr-4d.tns 10,10,10,10
+spark-submit --master yarn --deploy-mode client --num-executors 20 --executor-cores 2 --executor-memory 8G --class mulot.distributed.TuckerRunner MuLOT-distributed-assembly-0.6.jar hdfs:///datasets/lbnl-network.tns 10,10,10,10,10
+spark-submit --master yarn --deploy-mode client --num-executors 20 --executor-cores 2 --executor-memory 8G --class mulot.distributed.TuckerRunner MuLOT-distributed-assembly-0.6.jar hdfs:///datasets/chicago-crime-geo.tns 10,10,10,10,10
+
+./bin/PARTI --dev 12 --dims "1,1774269,1805187" -l 5 ~/datasets/amazon-reviews.tns 10 10 10 0 1 2
+./bin/PARTI --dev 12 --dims "532924,17262471,2480308" -l 5 ~/datasets/delicious-3d.tns 10 10 10 0 1 2
+./bin/PARTI --dev 12 --dims "319686,28153045,1607191" -l 5 ~/datasets/flickr-3d.tns 10 10 10 0 1 2
+./bin/PARTI --dev 12 --dims "2902330,2143368,25495389" -l 5 ~/datasets/nell-1.tns 10 10 10 0 1 2
 ./bin/PARTI --dev 12 --dims "12092,9184,28818" -l 5 ~/datasets/nell-2.tns 10 10 10 0 1 2
-./bin/PARTI --dev 12 --dims "1605,4198,1631,4209,868131" -l 5 ~/datasets/lbnl-network.tns 10 10 10 10 10 0 1 2 3 4
-./bin/PARTI --dev 12 --dims "6185,24,380,395,32" -l 5 ~/datasets/chicago-crime-geo.tns 10 10 10 10 10 0 1 2 3 4
+./bin/PARTI --dev 12 --dims "8211298,176962,8116559" -l 5 ~/datasets/reddit-2015.tns 10 10 10 0 1 2
 ./bin/PARTI --dev 12 --dims "165427,11374,2" -l 5 ~/datasets/vast-2015-mc1-3d.tns 10 10 10 0 1 2
-./bin/PARTI --dev 12 --dims "183,24,1140,1717" -l 5 ~/datasets/uber.tns 10 10 10 10 0 1 2 3
-./bin/PARTI --dev 12 --dims "2482,2862,14036,17" -l 5 ~/datasets/nips.tns 10 10 10 10 0 1 2 3
-./bin/PARTI --dev 12 --dims "6066,5699,244268,1176" -l 5 ~/datasets/enron.tns 10 10 10 10 0 1 2 3
 ./bin/PARTI --dev 12 --dims "6186,24,77,32" -l 5 ~/datasets/chicago-crime-comm.tns 10 10 10 10 0 1 2 3
+./bin/PARTI --dev 12 --dims "6066,5699,244268,1176" -l 5 ~/datasets/enron.tns 10 10 10 10 0 1 2 3
+./bin/PARTI --dev 12 --dims "319686,28153045,1607191,731" -l 5 ~/datasets/flickr-4d.tns 10 10 10 10 0 1 2 3
+./bin/PARTI --dev 12 --dims "2482,2862,14036,17" -l 5 ~/datasets/nips.tns 10 10 10 10 0 1 2 3
+./bin/PARTI --dev 12 --dims "183,24,1140,1717" -l 5 ~/datasets/uber.tns 10 10 10 10 0 1 2 3
+./bin/PARTI --dev 12 --dims "6185,24,380,395,32" -l 5 ~/datasets/chicago-crime-geo.tns 10 10 10 10 10 0 1 2 3 4
+./bin/PARTI --dev 12 --dims "1605,4198,1631,4209,868131" -l 5 ~/datasets/lbnl-network.tns 10 10 10 10 10 0 1 2 3 4
 
 ./bin/GTA ~/datasets/delicious-3d.tns mem_result/ 10 2
 ./bin/GTA ~/datasets/nell-1.tns mem_result/ 10 2
@@ -113,19 +148,20 @@
 ./bin/GPUTucker -i ~/datasets/amazon-reviews.tns -o 3 -r 10 -g 2
 ./bin/GPUTucker -i ~/datasets/reddit-2015.tns -o 3 -r 10 -g 2
 
-./bin/GSPTucker -i ~/datasets/nell-2.tns -o 3 -r 10 -g 2 -c 4  -H 48 -a
 ./bin/GSPTucker -i ~/datasets/delicious-3d.tns -o 3 -r 10 -g 2 -c 4  -H 48 -a
+./bin/GSPTucker -i ~/datasets/nell-1.tns -o 3 -r 10 -g 2 -c 4  -H 48 -a
+./bin/GSPTucker -i ~/datasets/nell-2.tns -o 3 -r 10 -g 2 -c 4  -H 48 -a
+./bin/GSPTucker -i ~/datasets/flickr-3d.tns -o 3 -r 10 -g 2 -c 4  -H 48 -a
 ./bin/GSPTucker -i ~/datasets/vast-2015-mc1-3d.tns -o 3 -r 10 -g 2 -c 4  -H 48
+./bin/GSPTucker -i ~/datasets/amazon-reviews.tns -o 3 -r 10 -g 2 -c 4 -H 48 -a
+./bin/GSPTucker -i ~/datasets/reddit-2015.tns -o 3 -r 10 -g 2 -c 4 -H 48 -a
 ./bin/GSPTucker -i ~/datasets/nips.tns -o 4 -r 10 -g 2 -c 4  -H 48
 ./bin/GSPTucker -i ~/datasets/enron.tns -o 4 -r 10 -g 2 -c 4  -H 48 -a
 ./bin/GSPTucker -i ~/datasets/lbnl-network.tns -o 5 -r 10 -g 2 -c 4  -H 48
-./bin/GSPTucker -i ~/datasets/nell-1.tns -o 3 -r 10 -g 2 -c 4  -H 48 -a
 ./bin/GSPTucker -i ~/datasets/uber.tns -o 4 -r 10 -g 2 -c 4  -H 48 -a
 ./bin/GSPTucker -i ~/datasets/chicago-crime-geo.tns -o 5 -r 10 -g 2 -c 4  -H 48 -a
 ./bin/GSPTucker -i ~/datasets/chicago-crime-comm.tns -o 4 -r 10 -g 2 -c 4  -H 48 -a
 ./bin/GSPTucker -i ~/datasets/flickr-4d.tns -o 4 -r 10 -g 2 -c 4  -H 48 -a
-./bin/GSPTucker -i ~/datasets/amazon-reviews.tns -o 3 -r 10 -g 2 -c 4 -H 48 -a
-./bin/GSPTucker -i ~/datasets/reddit-2015.tns -o 3 -r 10 -g 2 -c 4 -H 48 -a
 
 
 ## Tucker rank 20 
@@ -204,15 +240,50 @@
 ./bin/VeST ~/datasets/lbnl-network.tns mem_result/ 5 20 20 20 20 20 0.8 12 
 ./bin/VeST ~/datasets/chicago-crime-geo.tns mem_result/ 5 20 20 20 20 20 0.8 12
 
+hadoop jar HaTen2.jar kr.ac.snu.datalab.HaTen2.Tucker "1:1774269:1805187" "10:10:10" 20 1 hdfs:///datasets/amazon-reviews.tns hdfs:///output/haten2_r10/amazon-reviews ./log/haten2_r10/amazon-reviews_r10_it1.log
+hadoop jar HaTen2.jar kr.ac.snu.datalab.HaTen2.Tucker "532924:17262471:2480308" "10:10:10" 20 1 hdfs:///datasets/delicious-3d.tns hdfs:///output/haten2_r10/delicious-3d ./log/haten2_r10/delicious-3d_r10_it1.log
+hadoop jar HaTen2.jar kr.ac.snu.datalab.HaTen2.Tucker "319686:28153045:1607191" "10:10:10" 20 1 hdfs:///datasets/flickr-3d.tns hdfs:///output/haten2_r10/flickr-3d ./log/haten2_r10/flickr-3d_r10_it1.log
+hadoop jar HaTen2.jar kr.ac.snu.datalab.HaTen2.Tucker "2902330:2143368:25495389" "10:10:10" 20 1 hdfs:///datasets/nell-1.tns hdfs:///output/haten2_r10/nell-1 ./log/haten2_r10/nell-1_r10_it1.log
+hadoop jar HaTen2.jar kr.ac.snu.datalab.HaTen2.Tucker "12092:9184:28818" "10:10:10" 20 1 hdfs:///datasets/nell-2.tns hdfs:///output/haten2_r10/nell-2 ./log/haten2_r10/nell-2_r10_it1.log
+hadoop jar HaTen2.jar kr.ac.snu.datalab.HaTen2.Tucker "8211298:176962:8116559" "10:10:10" 20 1 hdfs:///datasets/reddit-2015.tns hdfs:///output/haten2_r10/reddit-2015 ./log/haten2_r10/reddit-2015_r10_it1.log
+hadoop jar HaTen2.jar kr.ac.snu.datalab.HaTen2.Tucker "165427:11374:2" "10:10:10" 20 1 hdfs:///datasets/vast-2015-mc1-3d.tns hdfs:///output/haten2_r10/vast-2015-mc1-3d ./log/haten2_r10/vast-2015-mc1-3d_r10_it1.log
+hadoop jar HaTen2.jar kr.ac.snu.datalab.HaTen2.Tucker "6186:24:77:32" "10:10:10:10" 20 1 hdfs:///datasets/chicago-crime-comm.tns hdfs:///output/haten2_r10/chicago-crime-comm ./log/haten2_r10/chicago-crime-comm_r10_it1.log
+hadoop jar HaTen2.jar kr.ac.snu.datalab.HaTen2.Tucker "6066:5699:244268:1176" "10:10:10:10" 20 1 hdfs:///datasets/enron.tns hdfs:///output/haten2_r10/enron ./log/haten2_r10/enron_r10_it1.log
+hadoop jar HaTen2.jar kr.ac.snu.datalab.HaTen2.Tucker "319686:28153045:1607191:731" "10:10:10:10" 20 1 hdfs:///datasets/flickr-4d.tns hdfs:///output/haten2_r10/flickr-4d ./log/haten2_r10/flickr-4d_r10_it1.log
+hadoop jar HaTen2.jar kr.ac.snu.datalab.HaTen2.Tucker "2482:2862:14036:17" "10:10:10:10" 20 1 hdfs:///datasets/nips.tns hdfs:///output/haten2_r10/nips ./log/haten2_r10/nips_r10_it1.log
+hadoop jar HaTen2.jar kr.ac.snu.datalab.HaTen2.Tucker "183:24:1140:1717" "10:10:10:10" 20 1 hdfs:///datasets/uber.tns hdfs:///output/haten2_r10/uber ./log/haten2_r10/uber_r10_it1.log
+hadoop jar HaTen2.jar kr.ac.snu.datalab.HaTen2.Tucker "6185:24:380:395:32" "10:10:10:10:10" 20 1 hdfs:///datasets/chicago-crime-geo.tns hdfs:///output/haten2_r10/chicago-crime-geo ./log/haten2_r10/chicago-crime-geo_r10_it1.log
+hadoop jar HaTen2.jar kr.ac.snu.datalab.HaTen2.Tucker "1605:4198:1631:4209:868131" "10:10:10:10:10" 20 1 hdfs:///datasets/lbnl-network.tns hdfs:///output/haten2_r10/lbnl-network ./log/haten2_r10/lbnl-network_r10_it1.log
 
+spark-submit --master yarn --deploy-mode client --num-executors 20 --executor-cores 2 --executor-memory 8G --class mulot.distributed.TuckerRunner MuLOT-distributed-assembly-0.6.jar hdfs:///datasets/nell-2.tns 10,10,10
+spark-submit --master yarn --deploy-mode client --num-executors 20 --executor-cores 2 --executor-memory 8G --class mulot.distributed.TuckerRunner MuLOT-distributed-assembly-0.6.jar hdfs:///datasets/nell-1.tns 10,10,10
+spark-submit --master yarn --deploy-mode client --num-executors 20 --executor-cores 2 --executor-memory 8G --class mulot.distributed.TuckerRunner MuLOT-distributed-assembly-0.6.jar hdfs:///datasets/delicious-3d.tns 10,10,10
+spark-submit --master yarn --deploy-mode client --num-executors 20 --executor-cores 2 --executor-memory 8G --class mulot.distributed.TuckerRunner MuLOT-distributed-assembly-0.6.jar hdfs:///datasets/flickr-3d.tns 10,10,10
+spark-submit --master yarn --deploy-mode client --num-executors 20 --executor-cores 2 --executor-memory 8G --class mulot.distributed.TuckerRunner MuLOT-distributed-assembly-0.6.jar hdfs:///datasets/vast-2015-mc1-3d.tns 10,10,10
+spark-submit --master yarn --deploy-mode client --num-executors 20 --executor-cores 2 --executor-memory 8G --class mulot.distributed.TuckerRunner MuLOT-distributed-assembly-0.6.jar hdfs:///datasets/reddit-2015.tns 10,10,10
+spark-submit --master yarn --deploy-mode client --num-executors 20 --executor-cores 2 --executor-memory 8G --class mulot.distributed.TuckerRunner MuLOT-distributed-assembly-0.6.jar hdfs:///datasets/amazon-reviews.tns 10,10,10
+spark-submit --master yarn --deploy-mode client --num-executors 20 --executor-cores 2 --executor-memory 8G --class mulot.distributed.TuckerRunner MuLOT-distributed-assembly-0.6.jar hdfs:///datasets/nips.tns 10,10,10,10
+spark-submit --master yarn --deploy-mode client --num-executors 20 --executor-cores 2 --executor-memory 8G --class mulot.distributed.TuckerRunner MuLOT-distributed-assembly-0.6.jar hdfs:///datasets/uber.tns 10,10,10,10
+spark-submit --master yarn --deploy-mode client --num-executors 20 --executor-cores 2 --executor-memory 8G --class mulot.distributed.TuckerRunner MuLOT-distributed-assembly-0.6.jar hdfs:///datasets/chicago-crime-comm.tns 10,10,10,10
+spark-submit --master yarn --deploy-mode client --num-executors 20 --executor-cores 2 --executor-memory 8G --class mulot.distributed.TuckerRunner MuLOT-distributed-assembly-0.6.jar hdfs:///datasets/enron.tns 10,10,10,10
+spark-submit --master yarn --deploy-mode client --num-executors 20 --executor-cores 2 --executor-memory 8G --class mulot.distributed.TuckerRunner MuLOT-distributed-assembly-0.6.jar hdfs:///datasets/flickr-4d.tns 10,10,10,10
+spark-submit --master yarn --deploy-mode client --num-executors 20 --executor-cores 2 --executor-memory 8G --class mulot.distributed.TuckerRunner MuLOT-distributed-assembly-0.6.jar hdfs:///datasets/lbnl-network.tns 10,10,10,10,10
+spark-submit --master yarn --deploy-mode client --num-executors 20 --executor-cores 2 --executor-memory 8G --class mulot.distributed.TuckerRunner MuLOT-distributed-assembly-0.6.jar hdfs:///datasets/chicago-crime-geo.tns 10,10,10,10,10
+
+./bin/PARTI --dev 12 --dims "1,1774269,1805187" -l 5 ~/datasets/amazon-reviews.tns 20 20 20 0 1 2
+./bin/PARTI --dev 12 --dims "532924,17262471,2480308" -l 5 ~/datasets/delicious-3d.tns 20 20 20 0 1 2
+./bin/PARTI --dev 12 --dims "319686,28153045,1607191" -l 5 ~/datasets/flickr-3d.tns 20 20 20 0 1 2
+./bin/PARTI --dev 12 --dims "2902330,2143368,25495389" -l 5 ~/datasets/nell-1.tns 20 20 20 0 1 2
 ./bin/PARTI --dev 12 --dims "12092,9184,28818" -l 5 ~/datasets/nell-2.tns 20 20 20 0 1 2
-./bin/PARTI --dev 12 --dims "1605,4198,1631,4209,868131" -l 5 ~/datasets/lbnl-network.tns 20 20 20 20 20 0 1 2 3 4
-./bin/PARTI --dev 12 --dims "6185,24,380,395,32" -l 5 ~/datasets/chicago-crime-geo.tns 20 20 20 20 20 0 1 2 3 4
+./bin/PARTI --dev 12 --dims "8211298,176962,8116559" -l 5 ~/datasets/reddit-2015.tns 20 20 20 0 1 2
 ./bin/PARTI --dev 12 --dims "165427,11374,2" -l 5 ~/datasets/vast-2015-mc1-3d.tns 20 20 20 0 1 2
-./bin/PARTI --dev 12 --dims "183,24,1140,1717" -l 5 ~/datasets/uber.tns 20 20 20 20 0 1 2 3
-./bin/PARTI --dev 12 --dims "2482,2862,14036,17" -l 5 ~/datasets/nips.tns 20 20 20 20 0 1 2 3
-./bin/PARTI --dev 12 --dims "6066,5699,244268,1176" -l 5 ~/datasets/enron.tns 20 20 20 20 0 1 2 3
 ./bin/PARTI --dev 12 --dims "6186,24,77,32" -l 5 ~/datasets/chicago-crime-comm.tns 20 20 20 20 0 1 2 3
+./bin/PARTI --dev 12 --dims "6066,5699,244268,1176" -l 5 ~/datasets/enron.tns 20 20 20 20 0 1 2 3
+./bin/PARTI --dev 12 --dims "319686,28153045,1607191,731" -l 5 ~/datasets/flickr-4d.tns 20 20 20 20 0 1 2 3
+./bin/PARTI --dev 12 --dims "2482,2862,14036,17" -l 5 ~/datasets/nips.tns 20 20 20 20 0 1 2 3
+./bin/PARTI --dev 12 --dims "183,24,1140,1717" -l 5 ~/datasets/uber.tns 20 20 20 20 0 1 2 3
+./bin/PARTI --dev 12 --dims "6185,24,380,395,32" -l 5 ~/datasets/chicago-crime-geo.tns 20 20 20 20 20 0 1 2 3 4
+./bin/PARTI --dev 12 --dims "1605,4198,1631,4209,868131" -l 5 ~/datasets/lbnl-network.tns 20 20 20 20 20 0 1 2 3 4
 
 ./bin/GTA ~/datasets/delicious-3d.tns mem_result/ 20 2
 ./bin/GTA ~/datasets/nell-1.tns mem_result/ 20 2
