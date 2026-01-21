@@ -1,6 +1,6 @@
 # GSPTucker
 
-GSPTucker is a high-performance Tucker decomposition implementation designed for large-scale tensors. It leverages CUDA for GPU acceleration and supports out-of-core processing to handle tensors that exceed GPU memory limits.
+GSPTucker is a high-performance Tucker decomposition implementation designed for large-scale sparse tensors. It leverages CUDA for GPU acceleration and supports out-of-core processing to handle tensors that exceed GPU memory limits.
 
 ## Features
 
